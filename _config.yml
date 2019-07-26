@@ -119,3 +119,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+remote_theme : jhoon2816/LOFFER
