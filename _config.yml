@@ -1,8 +1,11 @@
-title: Hacker-Blog
-description: "A Jekyll Blog Theme For Hackers"
+
+remote_theme : tocttou/hacker-blog
+
+title: Hooni's Blog
+description: "TIL Blog for Hooni"
 author:
 name: "SomeHacker"
-email: "someone@somewebsite.somedomain"
+email: "jhoon2816@gmail.com"
 url: "https://jhoon2816.github.io"
 baseurl: ""
 
@@ -30,4 +33,3 @@ plugins:
 owner : "SomeHacker"
 year : "2018"
 
-remote_theme : tocttou/hacker-blog
