@@ -10,10 +10,10 @@ owner:
   name:           Cole Townsend
   avatar:         avatar.png
   bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco
-  github:         coletownsend
-  instagram:      ctrunsthis
+  email:          jhoon2816@gmail.com
+  twitter:        
+  github:         github.com/jhoon2816
+  instagram:      
   dribbble:       coletownsend
   disqus:         balzac
   location:       "Buffalo, NY"
@@ -33,10 +33,10 @@ links:
   - title: About
     url: /about
   - title: Github
-    url: http://jhoon2816.github.io
+    url: https://github.com/jhoon2816/jhoon2816.github.io
     external: true
-  - title: Cole Who?
-    url: http://coletownsend.com
+  - title: Who am i?
+    url: https://uuebstudio.com
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
