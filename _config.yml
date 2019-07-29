@@ -1,4 +1,4 @@
-title:            Balzac
+title:            Hooni's Blog
 tagline:          A beautiful theme.
 description:      Describe your website.
 canonical: http://jekyll.gtat.me
@@ -8,10 +8,10 @@ owner:
   name:           Cole Townsend
   avatar:         avatar.png
   bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco
-  github:         coletownsend
-  instagram:      ctrunsthis
+  email:          jhoon2816@gmail.com
+  twitter:        
+  github:         jhoon2816
+  instagram:      https://www.instagram.com/jhun2816/
   dribbble:       coletownsend
   disqus:         balzac
   location:       "Buffalo, NY"
@@ -23,7 +23,7 @@ tools:
 
 # Open Graph customization
 opengraph:
-  locale:           en_US
+  locale:           ko_KR
 
 # Links to include in top navigation
 # For external links add external: true
@@ -31,14 +31,14 @@ links:
   - title: About
     url: /about
   - title: Github
-    url: https://github.com/ColeTownsend/Balzac-for-Jekyll
+    url: https://github.com/jhoon2816/jhoon2816.gihub.io
     external: true
-  - title: Cole Who?
-    url: http://coletownsend.com
+  - title: Who am I?
+    url: http://uuebstudio.com
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Asia/Seoul
 future:      true
 highlighter: pygments
 markdown:    kramdown
