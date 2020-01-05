@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-minibundle'
-gem 'coderay'
-gem 'rake'
+group :jekyll_plugins do
+  gem 'jekyll'
+  gem 'jekyll-paginate'
+  gem 'jekyll-gist'
+  gem 'jekyll-assets', '~> 2.3.2'
+  gem 'jekyll-watch'
+  gem 'jekyll_pages_api', :git => "https://github.com/18F/jekyll_pages_api"
+  gem 'jekyll-react'
+  gem 'uglifier'
+  gem 'sass'
+  gem 'kramdown'
+  gem 'rouge'
+end

@@ -1,67 +1,100 @@
-title:            Hooni's Blog
-tagline:          A beautiful theme.
-description:      Describe your website.
-canonical: http://jekyll.gtat.me
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Owner/author information
-owner:
-  name:           Cole Townsend
-  avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          jhoon2816@gmail.com
-  twitter:        
-  github:         jhoon2816
-  instagram:      https://www.instagram.com/jhun2816/
-  dribbble:       coletownsend
-  disqus:         balzac
-  location:       "Buffalo, NY"
-  # Plug in your disqus shortname!
+# Site settings
+react:
+  title: Material Bliss
+  name: Andrew Plaza
+  menu_right_subtitle: Blogger || Computer Scientist
+  avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
+  logo: static/img/logo_theme.jpg
+  email: aplaza@liquidthink.net
+  description: > # this means to ignore newlines until "baseurl:"
+    Write an awesome description for your new site here. You can edit this
+    line in _config.yml. It will appear in your document head meta (for
+    Google search results) and in your feed.xml site description.
+  baseurl: "" # the subpath of your site, e.g. /blog
+  url: "http://test_domain.com:4000" # the base hostname & protocol for your site
+  permalink: /posts/:title
+  social:
+    twitter: http://twitter.com/liquid_think
+    github: http://github.com/InsidiousMind
+    facebook: http://facebook.com/liquidthinknet
+    code: http://livecoding.tv/insidious #livecoding.tv handle
+    google-plus: http://plus.google.com/+LiquidthinkNet #make sure to include the '+'
+    rss: feed.xml
 
-tools:
-  standards:      "HTML, SCSS, Jekyll"
-  software:       "git"
 
-# Open Graph customization
-opengraph:
-  locale:           ko_KR
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Github
-    url: https://github.com/jhoon2816/jhoon2816.github.io
-    external: true
-  - title: Who am I?
-    url: http://uuebstudio.com
-    external: true
+title: Material Bliss
+name: Andrew Plaza
+menu_right_subtitle: Blogger || Computer Scientist
+avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
+logo: static/img/logo.png
+email: aplaza@liquidthink.net
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://test_domain.com:4000" # the base hostname & protocol for your site
+permalink: /posts/:title
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Seoul
-future:      true
-highlighter: pygments
-markdown:    kramdown
+twitter_username: liquid_think
+github_username: InsidiousMind
+
+
+# Build settings
+markdown: kramdown
 
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
+  input: GFM
+  syntax_highlighter: rouge
 
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+source: src
+destination: public
 
-sass:
-    style: :compressed
+assets:
+  compress:
+    css: sass
+    js: false
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+  autowrite: true
+  cache: .asset-cache
+  cache_type: filesystem
+  cdn: www.example.com
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  digest: true
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+  assets:
+    - "*.png"
+    - "bundle.css"
+    - "bundle.js.map"
+    - "*.svg"
+    - "*.eof"
+    - "*.ttf"
+
+  sources:
+    - src/_assets/css
+    - src/_assets/fonts
+    - src/_assets/img
+    - src/_assets/projects
+
+  features:
+    liquid: false
+    integrity: true
+    automatic_img_size: true
+    automatic_img_alt : true
+
+exclude: ['node_modules', 'Gemfile', '.asset-cache', 'build-prod.sh', 'build-dev.sh']
+
+gems:
+  - jekyll-assets
+  - jekyll_pages_api
+  - jekyll-react

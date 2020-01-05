@@ -1,138 +1,100 @@
-# Balzac
+# Material Theme for Jekyll!
+## DEMO: [code.liquidthink.net](http://www.code.liquidthink.net)
+#### created with React, Redux, React-Router and transpiled with Webpack.
+![travis-ci](https://api.travis-ci.org/InsidiousMind/material-bliss-jekyll-theme.svg?branch=master)
 
-This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. Michael set up an awesome dev environment for this which really helped speed up my progress. He also already wrote up an incredibly comprehensive readme.md so I basically copied all of it and replaced what was necessary. The design itself is my own and I cannot let you sell this or tweak the design for resale, unless I you [contact me](mailto:cole@coletownsend.com).
+Made with React and served statically and dynamically
 
-
-If you'd like give me credit somewhere on your blog or tweet a shout out to
-[@twnsndco](https://twitter.com/twnsndco), that would be pretty sweet. 
-
-If you feel like donating — [Give it a thought.](http://gtat.me/balzac/donate)
-
----
-
-
-![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
-![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
-
-## Features:
-- flexible, uses max-width for responsive goodness
-- responsive drop down menu
-- retina images using @2x
-- post loop in the footer showing 3 latest posts
-- custom portfolio page for case studies
-
-## Basic Setup
-
-1. [Install Jekyll](http://jekyllrb.com) if you haven't already.
-2. Download this bad boy.
-3.  Fork the [Balzac repo](http://github.com/coletownsend/balzac-for-jekyll/)
-4. Twerk it out so it's just for you.
-5.  ???
-6.  Profit
-
-## [Preview the Theme](http://jekyll.gtat.me)
-=======
- [Preview the Theme](http://jekyll.gtat.me)
- 
-``` bash
-balzac-for-jekyll/
-├── _includes
-|    ├── footer.html  //site footer
-|    ├── head.html  //site head
-|    ├── head-dark.html  //dark site head for light pages
-├── _layouts
-|    ├── home.html  //homepage layout
-|    ├── page.html  //page layout
-|    ├── post-index.html  //post listing layout
-|    └── post.html  //post layout
-|    ├── post-no-feature.html  //feature image-less post layout
-├── _posts
-├── assets
-|    ├── css  //preprocessed less styles. good idea to minify
-|    ├── img  //images and graphics used in css and js
-|    ├── js
-|    |   ├── main.js  //jQuery plugins and settings
-|    |   └── vendor  //all 3rd party scripts
-|    └── sass 
-├── images  //images for posts and pages
-├── about.md  //about page
-├── articles.md  //lists all posts from latest to oldest
-└── index.md  //homepage. lists 5 most recent posts
+### **in order to build:**
+#### for Production
+```
+./build-prod.sh //for production build
 ```
 
-# Customization
-
-## _config.yml
-
-Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. When working locally comment out `url` or else you will get a bunch of broken links because they are absolute and prefixed with `{{ site.url }}` in the various `_includes` and `_layouts`. Just remember to uncomment `url` when building for deployment or pushing to **gh-pages**...
-
-### Owner/Author Information
-
-Change your name, bio, Twitter url, email, Dribbble URL, etc.
-
-
-### Top Navigation Links
-
-Edit page/post titles and URLs to include in the site's navigation. For external links add `external: true`.
-
-``` yaml
-# sample top navigation links
-links:
-  - title: About Page
-    url: /about
-  - title: Other Page
-    url: /other-page
-  - title: External Page
-    url: http://coletownsend.com
-    external: true
+#### for Development:
+run both build-dev and npm run jekyll in different terminals
 ```
-
-## Other Stuff
-
-The rest is just your average Jekyll config settings. Nothing too crazy here...
-
-### _includes
-
-For the most part you can leave these as is since the author/owner details are pulled from `_config.yml`. That said you'll probably want to customize the copyright stuff in `footer.html` to your liking.
-
-### Adding Posts and Pages
-
-There are two main content layouts: `post.html` (for posts) and `page.html` (for pages). Both have large **feature images** that span the full-width of the screen, and both are meant for text heavy blog posts (or articles). 
-
-### Feature Images
-
-A good rule of thumb is to keep feature images nice and wide so you don't push the body text too far down. An image cropped around around 1024 x 256 pixels will keep file size down with an acceptable resolution for most devices. 
-
-``` yaml
-image:
-# local image 
-  feature: feature-image-filename.jpg
-# link image
-  feature: "http(s)://image.domain.com/feature-image-filename.jpg"
+npm run jekyll // in one terminal
+./build-dev.sh //in another
 ```
+### Features:
+- Two Themes: Light and Dark
+- Fully Responsive for most devices
+- Dynamic Fuzzy Search
+- Push-out Menu to save space and create focus for users
+- Dynamic Project Page in a masonry layout built
+- The pros of dynamic webpages matched with the awesomeness of static Jekyll
+- Optimized (99/100 on testmysite by google) with Jekyll Assets and Webpack
+- included RESTful-like API (with [jekyll-react plugin](https://github.com/InsidiousMind/Jekyll-React))
+- Static or Dynamic Pages with just a frontmatter option
+- MORE TO COME
 
-This makes the assumption that the feature image is in the *images* folder unless it has a link address. To add a feature image to a post or page just include the filename in the front matter like so.
-You can "serve" images responsively with retina.js. All you need to do is have a file with @2x before the file type. That should be placed in the *images* folder. You literally don't have to do anything other than that. 2 copies. One is linked. That's it.
-Ex:
-`cool-photo@2x.jpg` 
+### Screen Shots
 
-**There is a default feature image that will show up for and posts. It isn't retina or anything. It's just there in case you want one but forget <3*
+Dark Theme
+![Dark Theme](http://i.imgur.com/GfFoLXS.png)
 
-#### If you don't want a feature image
-…just say so in the front-matter. Go to your-post-name.md and make sure it has this guy up top.
-```
-layout: post-no-feature
-```
+Light Theme
+![Light Theme](http://i.imgur.com/cdIgtax.png)
 
-### Categories
+Dark Theme with Push out menu active
+![Dark Theme Push Out](http://i.imgur.com/xsjkszO.png)
 
-In the sample `_posts` folder you may have noticed `category: articles` in the front matter. I like keeping all posts grouped in the same folder. If you decide to rename or add categories you will need to modify the permalink in `articles.md` along with the filename (if renaming).
+Project Page
+![Project Page](http://i.imgur.com/VnLqCpi.png)
 
-For example. Say you want to group all your posts under `blog/` instead of `articles/`. In your post add `category: blog` to the front matter, rename or duplicate `articles.md` to `blog.md` and change the permalink in that file to `permalink: /blog/index.html`.
-
-If done correctly `/blog` should be a page listing all the site's posts.
+Single Post
+![Post](http://i.imgur.com/AcZ8nNi.png)
 
 
-## License
+## Site Layout
 
-This is free to use, fork, do whatever you want. Please *do not* sell this design though. You don't need to link me to it, but please contact me if you intend to market this theme. I am releasing premium versions of this design for select CMS's. 
+`./react-dev/pages`
+- These are static Jekyll components being rendered with react
+
+`./react-dev/helpers.js`
+- these are global helpers. Right now all that is included are the static routes of you're site. Put all your static routes there (in 'staticRoutes' array), you don't need the full route just the base after your url So for example, if my posts are static and are at
+ `http://www.example.com/posts/this-is-a-post.html`
+ you just need "/posts/"
+ this makes the loading of some parts of the site seem almost 'instant', while preserving the SEO of your site since Google can crawl the static content
+
+`./react-dev/components/menu_items.js`
+
+- This is where your menu items are rendered. If you want a new item, add an object to the Hashlist with it's corresponding path (from your root url) Javascript object. IE if it is:
+
+`const menuItems = { Home: '/', About: '/about/', Projects: '/projects/' };`
+and you want another entry, "Coding", with a path '/coding/' from the root url the object should look something like this :
+`const menuItems = { Home: '/', About: '/about/', Projects: '/projects/', Coding: '/coding'};`
+
+
+`./react-dev/actions/index.js`
+- this is where the magic happens from the JSON our Jekyll plugins rendered ( Jekyll_pages_api and Jekyll-react)
+You're going to want to add your site url to the `ROOT_URL` variable
+EX:
+if your site is at `http://www.example.com` change
+`const ROOT_URL = 'http://test_domain.com:4000';`
+to
+`const ROOT_URL = 'http://example.com';`
+
+
+### Site Config Variables:
+any site configuration that you want to let React use, put under 'react' in your `_config.yml`. This will be grabbed by the siteInfo action creator and put through it's corresponding reducer
+
+### TODO:
+ - [x] create a jekyll plugin to output all [YML config] site data into JSON, in such a way which is importable to react and can be used to manage state
+ - [x] [possible TODO, maybe redundant. ?] Rendered JS to HTML and outputted into a folder for Jekyll to take it. This allows us to use React components on `_layouts`
+ - [x] create a Dynamic Search Function with Auto Fill
+ - [x] Finish implementing Toggle Theme Switch
+ - [ ] add useful important information to single-post post meta
+ - [ ] make footer look better on mobile
+ - [ ] Implement 'sliding' on mobile-touchA
+ - [ ] make expanded search bar more responsive on mobile
+ - [ ] create category pages
+ - [ ] add pagination
+ - [ ] Make different post 'types' (IE Fullsize page)
+ - [ ] make it easier to use with Jekyll
+ - [ ] Save theme in sites cookies
+
+
+### Contribution
+Want to contribute? Found an issue? Jump right in! I welcome any help I can get, and will work with you to fix any issues.
